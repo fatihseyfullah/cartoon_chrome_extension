@@ -1,0 +1,20 @@
+{
+	"manifest_version" : 2,
+	"name" : "Cartoon Chrome Extension",
+	"version" : "0.1",
+	"description" : "Çocukların sadece istenilen kanallara ait çizgi film izlemesini sağlayan Google Chrome eklentisi",
+	"icons" : {
+				"128" : "icon128.png",
+				"48" : "icon48.png" ,
+				"16" : "icon16.png"
+				},
+	"browser_action" : {
+						"default_icon" : "icon16.png"
+						},
+	"content_scripts":[
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js", "jquery-3.4.1.min.js"]
+    }
+  ]
+}
