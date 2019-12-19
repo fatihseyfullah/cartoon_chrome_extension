@@ -18,7 +18,7 @@ document.getElementById('reset-btn').addEventListener('click', (event) => {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // to prevent submit event to go to popup.html?limit=x
-    setNewLimit(document.getElementById('block-after').value * 60 * 100)
+    setNewLimit(document.getElementById('block-after').value * 60 * 1000)
 
 })
 
