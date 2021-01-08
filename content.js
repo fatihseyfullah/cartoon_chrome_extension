@@ -18,7 +18,8 @@ if (document.evaluate('//*[@id="text"]/a', document, null, XPathResult.FIRST_ORD
 	console.log ("2"); 
 }
 else
-{     if(document.evaluate('//img[contains(@src, "https://yt3.ggpht.com/ytc/AAUvwniKvLWthPa5o1TYobGTsmNZI-qKHIJy4zyq382n_A=s176-c-k-c0xffffffff-no-rj-mo")]', document, null,  XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue!=null){
+{   
+	  if(document.evaluate('//img[contains(@src, "https://yt3.ggpht.com/ytc/AAUvwniKvLWthPa5o1TYobGTsmNZI-qKHIJy4zyq382n_A=s176-c-k-c0xffffffff-no-rj-mo")]', document, null,  XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue!=null){
 		 
 		if (   document.evaluate('//*[@id="text"]/a', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.text == "TRT Çocuk" ) {
 			 
