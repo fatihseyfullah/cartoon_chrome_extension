@@ -1,12 +1,42 @@
 <html>
     <body>
         <form id="block-form" >
+          
             <label for="block-after">Block after * minutes</label>
             <input type="number" name="block-after" id="block-after">
-            <button type="submit">Set</button>
+            <button type="submit">Set</button> 
+             <button id="reset-btn">Reset and Disable</button>
         </form>
-        <button id="reset-btn">Reset and Disable</button>
-        <script src="popup.js"></script>
-    </body>
-
+        <br/>
+        <br/>
+      <form action="">
+        <input type="text"  placeholder="Channel img src"> <input>
+      </form> 
+        <form action="WriteToFile(this)">
+        <label>Type your first name:</label>
+        <input type="text" name="FirstName" id="firstName" size="20"> 
+        <label>Type your last name: </abel>
+        <input type="text" name="LastName" id="lastName" size="20"> 
+        <input type="submit" value="submit">
+        </form>
+    </body> 
 </html>
+<script src="popup.js"></script> 
+<script>
+
+function WriteToFile(passForm) {
+ 
+ set fso = CreateObject("Scripting.FileSystemObject"); 
+ set s   = fso.CreateTextFile("/popup.html", True);
+console.log(s);
+ var firstName = document.getElementById('firstName');
+ var lastName  = document.getElementById('lastName');
+
+ s.writeline("First Name :" + firstName);
+ s.writeline("Last Name :" + lastName);
+
+ s.writeline("-----------------------------");
+ console.log("yazılıyor")
+ s.Close();
+}
+</script>
