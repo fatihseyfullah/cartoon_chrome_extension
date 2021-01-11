@@ -14,8 +14,7 @@ chrome.proxy.settings.set({
     scope: 'regular'
   },
   function () {});
-
-
+ 
 // sets limit to given minute. (but in miliseconds)
 function limitUsage(limitInMiliseconds = Infinity) {
 
@@ -42,12 +41,9 @@ function limitUsage(limitInMiliseconds = Infinity) {
       function () {}
     );
 
-  }, limitInMiliseconds)
-
-
+  }, limitInMiliseconds) 
 }
-
-
+ 
 chrome.storage.sync.get(['limitInMiliseconds'], (results) => {
   limitUsage(results.limit)
 })
